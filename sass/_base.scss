@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: $font-default;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $dark-cyan;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  &::before {
+    content: url("../images/bg-pattern-top.svg");
+    position: absolute;
+    z-index: -1;
+    right: 50%;
+    bottom: 40%;
+  }
+
+  &::after {
+    content: url("../images/bg-pattern-bottom.svg");
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+  }
+}
